@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Material Design Bootstrap</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <style>
+        *{
+            font-family: 'Cambria';
+	        font-size: 20px;
+        }
+        .title{
+            font-size: 25px;
+            text-align: center;
+        }
+        .address{
+            font-size: 18px;
+            text-align: center;
+        }
+        .form-group{
+            margin-bottom:40px;
+        }
+        .form-control{
+            border-radius: 0;
+            border: none;
+            border-bottom: 1px solid black;
+            box-shadow: none;    
+        }
+        .text{
+            border-radius: 0;
+            border: none;
+            border-bottom: 1px solid black;
+            box-shadow: none; 
+            text-decoration:bold;
+        }
+        .text{
+            font-weight: bold;
+            text-align:center;
+            text-transform: uppercase;
+            font-size:18px;
+        }
+        </style>
+    </head>
+    <body onload="window.print();">
+        <div class="container">
+            <div class="card" style="border:1px solid black">
+                <div class="card-body">
+                    <div class="title" style="font-size:35px;"><img src="{% static 'images/association.jpeg' %}" alt="logo" height="100" width="100"> KRISHNAGIRI DISTRICT DEAF TRUST <img src="{% static 'images/trust1.jpeg' %}" alt="logo" height="100" width="100"></div>
+                    <div class="address">Regd:46/2009</div>
+                    <h3 class="address">(Dristict Apex Body for Deaf Sports and Social Welfare)</h3>
+                    <h3 class="address">Redd. Under The TamilNadu Societies Registration Act 27 of 1975</h3>
+                    <div class="address">KDDA Auditorium 29/1,2 Titan Township H.C.F Post, Mathigiri,Hosur-635110 TamilNadu</div>
+                    <div class="address">Email id:kddakdda@yahoo.com Web : hosurkdda.com Mobile:9443511638</div>
+                    <br/>
+                    <div class="row">
+                        <div class="col">
+                            <p style="font-size:20px;">No: {{ incid }}</p>
+                        </div>
+                        <div class="col">
+                            <h3 class="text-center" style="text-decoration:underline;">Receipt</h3>
+                        </div>
+                        <div class="col">
+                            <h6 class="text-center" style="font-size:20px">Date: {{ incdate }}</h6>
+                        </div>
+                    </div>
+                    <br/>
+                    Recived with thanks from M/s. <input type="text" class="text" size="50" value="{{ incby }}"><br/><br/>
+                    the sum of Rupees <input type="text" class="text" size="70" value="{{ a }}"><br/><br/>
+                    towards <input type="text" class="text" size="80" value="{{ incname }}"><br/><br/>
+                    <div class="row">
+                        <div class="col">
+                            by Cheque No<input type="text" class="text" size="10" vlaue="{{ chequeordd }}">
+                        </div>
+                        <div class="col">
+                            date <input type="text" class="text" size="10" value="{{ dateinbank }}">
+                        </div>
+                        <div class="col">
+                            on <input type="text" class="text" size="13" value="{{ incmode }}"> Bank/Cash.
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col">
+                            Rs.<input type="text" class="text" value="{{ incamt }}">
+                        </div>
+                        <div class="col">
+                            <br/>
+                            <h3 style="float:right;font-size:20px;"><b>General Seceratry/Treasurer</b></h3>
+                        </div>
+                    <div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+        <script type="text/javascript">
+        new WOW().init();
+        </script>
+    </body>
+</html>
